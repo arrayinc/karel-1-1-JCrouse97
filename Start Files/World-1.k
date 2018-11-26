@@ -3,27 +3,37 @@
  * ---------------------------
  * This is your blank canvas. It is so beautiful.
  */
-
-function turnRight() {
-	turnLeft();
-	turnLeft();
-	turnLeft();
-}
-
-function turnAround() {
-	turnLeft();
-	turnLeft();
-}
+import "turns";
 
 function MoveBeeperToLedge() {
-	move();
+	right();
 	pickBeeper();
-	move();
+	right();
+	up();
+	right();
+	right();
+	putBeeper();
+	right();
+}
+
+function up() {
 	turnLeft();
 	move();
 	turnRight();
+}
+
+function right() {
 	move();
+}
+
+function left() {
+	turnAround();
 	move();
-	putBeeper();
+	turnAround();
+}
+
+function down() {
+	turnRight();
 	move();
+	turnLeft();
 }
